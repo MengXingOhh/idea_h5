@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="a.css">
+</head>
+<body>
+    
+    <div class='index'>
+        <div class="easyTag">
+            <div id="docType">&lt!DOCTYPE&gt 指定文档类型定义 </div>
+<hr>
+            <div id="contentDiv"> &ltmeta&gt 元素可提供有关页面的元信息（meta-information）,针对搜索引擎和更新频度的描述和关键词
+               <h2> http-equiv属性：</h2>
+               
+                   相当于http的文件头作用，向浏览器传回一些有用的信息，正确显示网页内容，与之对应的属性值content，content中的内容是各个参数的变量值</p><br>
+                    
+                  <span>  &lt!--2秒后跳转到对应的网址，注意引号--&gt <br>
+                    &ltmeta http-equiv="refresh" content="2;URL=https://www.mi.com"&lt #如果把URL和后面的内容去掉，就是2秒钟刷新一次，做了解;&gt</p>
+                    <br> &lt!--指定文档的编码类型--&gt
+                    <br> &ltmeta http-equiv="content-Type" charset=UTF8"&gt
+                    <br> &lt!--告诉IE以最高级模式渲染文档--&gt
+                    <br> &ltmeta http-equiv="x-ua-compatible" content="IE=edge"&gt</span>
+<hr>
+
+                    <div id="nameTag"> 
+                   <h2>name属性：</h2> 主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎查找信息和分类信息用的<br>
+                    &ltmeta name="keywords" content="meta总结,html meta,meta属性,meta跳转"&gt <br>
+                    &lt!-- 关键字，也就是别人是可以通过这些关键字搜索到我的这个文章的，搜索引擎就是能够这个content内容来帮别人搜索到你的这个文档的,SEO就是专门做这些搜索优化的；--&gt
+                    <br>
+                    &ltmeta name="description" content="描述内容"&gt #是对这个文档的描述，在百度一些内容的页面上，f12打开看看 
+           </div>
+<hr>
+            <div id="commendTags">
+                <h2>head内常用标签</h2><br>
+                <img src="../img/inhead.png" alt=""><br>
+                <div class="fuheK">
+                <h2>body常用标签</h2>  <br>
+                 常用特殊字符<br>
+                <img src="../img/specialcode.png" alt=""><br>
+                &lt br /&gt 插入一个换行简单的换行符<br>
+                &lthr /&gt 定义水平线<br>
+                &ltimg / &gt定义图像<br>
+                &ltinput /&gt 定义输入控件<br>
+                &ltlink /&gt 定义文档与外部资源的关系<br>
+                &ltembed /&gt 定义外部交互内容或插件<br>
+                </div>
+               
+            </div>
+        </div>
+<hr>       
+        <div id="textEffects">  
+        <h2>字体效果</h2>
+        h1~h6
+        &ltb>...&lt/b> 粗体字
+        <br>&ltstrong>...&lt/strong> 粗体字(强调)
+        <br>&lti>...&lt/i> 斜体字
+        <br>&ltem>...&lt/em> 斜体字(强调)
+        <br>&ltdfn>...&lt/dfn> 斜体字(表示定义)
+        <br>&ltu>...&lt/u> 底线
+        <br>&ltins>...&lt/ins> 底线(表示插入文字)
+        <br>&ltstrike>...&lt/strike> 横线
+        <br>&lts>...&lt/s> 删除线
+        <br>&ltdel>...&lt/del> 删除线(表示删除)
+        <br>&ltkbd>...&lt/kbd> 键盘文字
+        <br>&lttt>...&lt/tt> 打字体
+        <br>&ltxmp>...&lt/xmp> 固定宽度字体(在文件中空白、换行、定位功能有效)
+        <br>&ltplaintext>...&lt/plaintext> 固定宽度字体(不执行标记符号)
+        <br>&ltlisting>...&lt/listing> 固定宽度小字体
+        <br>&ltfont color=00ff00>...&lt/font> 字体颜色
+        <br>&ltfont size=1>...&lt/font> 最小字体
+        <br>&ltfont style =font-size:100 px>...&lt/font> 无限增大
+        <br>&ltbig> 显示大字体
+        <br>&ltblink> 闪烁的文字
+        <br>&ltcite>...&ltcite> 用于引经据典的文字
+        <br>&ltcode>&lt/code>&ltcomment>...&lt/comment> 加上批注   
+        <br>&lthr&gt水平线 
+        <br>&ltcenter>...&lt/center>
+        <br>&ltbase href=地址> (预设好连结路径) 
+        <br>&lta href=地址> &lt/a> 外部连结
+        <br>&ltimg src=图片地址> 贴图
+        <br>&ltbgsound src=MID音乐文件地址> 背景音乐设定 
+        </div>
+<hr>
+            <div id="marquee"> <h2>跑马灯</h2> <br>
+        <img src="../img/marquee.png" alt="">
+    </div>
+<hr>
+        <div id="linkDiv">  <h2>链接</h2>
+        &lta href=””></a><br>
+        1. target 属性:&lta href=””target=””>&lt/a><br>
+        2.name属性：&lta name="tips">（显示在页面上的文本）</a><br>
+        可以使用 id 属性来替代 name 属性<br>
+        ①&lta href="#tips">。。。&lt/a> 同一个文档中<br>
+        ②&lta href="http://www.w3school.com.cn/html/html_links.asp#tips">。。。&lt/a> 其他页面中 <br>
+        2. 用图像做链接：&lta href=""> &ltimg />&lt/a><br>
+        &lta href=#锚的名称> 指定锚名称的超级链接<br>
+        &lta href> 指定超级链接
+    </div>
+<hr>
+ </div>
+ <div class="searchDiv">
+  <ul>
+      <p>导航条</p>
+      
+      <li><a href="#docType">文档定义</a></li>
+      <li><a href="#contentDiv">内容</a></li>
+      <li><a href="#commendTags">常用标签</a></li>
+      <li><a href="#textEffects">字体效果</a></li>
+      <li><a href="#marquee">跑马灯</a></li>
+      <li><a href="#linkDiv">链接</a></li>
+  </ul>
+ </div>
+</body>
+</html>

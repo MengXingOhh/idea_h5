@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="b.css">
+    <link rel="stylesheet" href="html_++.css">
+</head>
+<body>
+    <div class="index_h">
+    
+    <div class="classDiv" id="kuangjia">
+        <h2>框架</h2>
+        <br> &ltframeset cols="*,*,*"> &lt/frameset noresize="noresize"> 左侧使用cols属性 三个不同文档组成 垂直框架 noresize是不可调节尺寸
+        <br> &ltframeset rows="*,*,*"> &lt/frameset> 左侧使用rows属性 三个不同文档组成 水平框架
+        <br> 框架标签（Frame） 内联框架(iframe)
+        <br> &lta href="" target=""> 指定超级链接的分割窗口 (用于导航栏)
+        <br> &lta href="...#cname"> 在文档地址后加#加上节点名称 使用框架导航跳转至指定的节
+        <br> &lta href="#cname"> 在同以文档内跳转到某节点 只需用#加节点名称 跳转至框架内的一个指定的节
+
+    </div>
+<hr>    
+
+<div class="classDiv" id="biaodan">
+    <h2>表单</h2>
+<div class="classDiv" id="allTags">
+   
+    <ul>
+        <li>可能设置的所有属性：&ltform <br>
+            action="action_page.php"<br>
+            method="GET"<br>
+            target="_blank"<br>
+            accept-charset="UTF-8"<br>
+            ectype="application/x-www-form-urlencoded" autocomplete="off"<br>
+            novalidate>
+        </li>
+        <li>
+            表单中enctype="multipart/form-data"的意思，是设置表单的MIME编码。默认du情况，这个编码格式是application/x-www-form-urlencoded，
+            不能zhi用于文件上传；dao只有使用了multipart/form-data，才能完整的传递文件数据
+        </li>
+        <li>
+            autocomplete 属性规定输入字段是否应该启用自动完成功能。
+            自动完成允许浏览器预测对字段的输入。当用户在字段开始键入时，
+            浏览器基于之前键入过的值，应该显示出在字段中填写的选项
+            <br>
+            <span>密码输入框添加 autocomplete="new-password" autocomplete 属性适用于下面的 input
+                类型：text、search、url、tel、email、password、datepickers、range 和 color</span>
+            </li>
+        <li>
+            novalidate 属性规定当提交表单时不对其进行验证。
+
+            如果使用该属性，则表单不会验证表单的输入
+        </li>
+        <li>
+            &ltform>标签 定义整体的表单区域
+            action属性 定义表单数据提交地址 如果省略 action 属性，则 action 会被设置为当前页面。
+            method属性 定义表单提交的方式，一般有“get”方式和“post”方式
+        </li>
+        <li>
+            &ltlabel>标签 label 标签不会向用户呈现任何特殊效果。
+            不过，它为鼠标用户改进了可用性。如果您在 label 元素内点击文本，就会触发此控件。
+            就是说，当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上
+        </li>
+    </ul>
+    </div>
+        <div class="classDiv" id="allValue" >
+<hr>
+        <h3>属性值</h3>
+        <img src="../img/inputpropety.png" alt="">
+        <ul>
+            <li> value属性 定义表单元素的值,此值是数据提交时键的值 </li>
+            <li> name属性 定义表单元素的名称，此名称是提交数据时的键名</li>
+            <li> checked: radio 和 checkbox 默认被选中</li>
+            <li> readonly: 只读. text 和 password</li>
+            <li> disabled: 对所用input都好使.</li>
+        </ul>
+    </div>
+<hr>
+    <div class="classDiv" id="tags"> 
+        &lttextarea>标签 定义多行文本输入框
+            <ul>
+                <li>name: 表单提交项的键.</li>
+                <li> cols: 文本域默认有多少列</li>
+                <li> rows: 文本域默认有多少行</li>
+        <li>
+            &ltselect>标签 定义下拉表单元素 <br>
+            name:表单提交项的键.<br>
+            size：选项个数<br>
+            multiple：多选项<br>
+            &ltoption> 下拉选中的每一项 属性：<br>
+            value:表单提交项的值. selected: selected下拉选默认被选中<br>
+            &ltoptgroup>为每一项加上分组<br>
+        </li>
+        <li>label 鼠标移到姓名上出输入框:
+            &ltlabel for="www">姓名&lt/label>
+            <br>
+        </li>
+     </ul>
+        </div>
+<hr>
+        <div class="classDiv" id="allinput">
+        <li>&ltdatalist> 元素:设置预定义值的 &ltinput> 元素</li>
+        <li>Name 属性：如果要正确地被提交，每个输入字段必须设置一个 name 属性</li>
+        <li>input输入类型：
+            Text：文本输入<br>
+            Password：密码字段<br>
+            Submit：定义提交表单数据至表单处理程序的按钮<br>
+            Radio：定义单选按钮<br>
+            Checkbox：定义复选框。<br>
+            Button：定义按钮<br>
+            Number：用于应该包含数字值的输入字段<br>
+            <h5>h5新的input类型</h5>
+            <li>email 类型用于应该包含 e-mail 地址的输入域。
+                在提交表单时，会自动验证 email 域的值。</li>
+            <li>url 类型用于应该包含 URL 地址的输入域。
+                在提交表单时，会自动验证 url 域的值</li>
+            <li>number 类型用于应该包含数值的输入域。
+                您还能够设定对所接受的数字的限定： (
+                    max	number	规定允许的最大值
+                    min	number	规定允许的最小值
+                    step	number	规定合法的数字间隔（如果 step="3"，则合法的数是 -3,0,3,6 等）
+                    value	number	规定默认值)
+            </li>
+            <li>range 类型用于应该包含一定范围内数字值的输入域。
+                range 类型显示为滑动条。</li>
+            <li>HTML5 拥有多个可供选取日期和时间的新输入类型：  <br>
+                date - 选取日、月、年<br>
+                month - 选取月、年<br>
+                week - 选取周和年<br>
+                time - 选取时间（小时和分钟）<br>
+                datetime - 选取时间、日、月、年（UTC 时间）<br>
+                datetime-local - 选取时间、日、月、年（本地时间）</li>
+        </li>
+    </ul>
+    </div>
+
+</div>
+<hr>
+<div class="classDiv" id="htmlDom">
+
+    <h4>dom</h4>
+
+    <h5>html dom tree </h5>
+
+    <img src="../img/ct_htmltree.gif" alt="">
+<p>
+       重排: 当DOM的变化影响了元素的几何属性（高和宽），比如改变边框宽度或给段落增加文字，导致行数增加， 浏览器需要重新计算元素的几何属性，
+            同样其他元素的几何属性和位置也会因此受到影响。浏览器会使渲染树中受到影响的部分失效，并重新构造渲染树。这个过程称为'重排'。
+</p>
+<p>
+       重绘: 完成重排后，浏览器会重新绘制受影响的部分到屏幕中，这个过程称为'重绘'。
+</p>   
+
+           <h4> 节点克隆:</h4>
+             ducument.cloneNode()
+           <h4> 获取集合: </h4>
+            ducument.getElementByName()<br>
+ ducument.getElementByClassName()<br>
+ ducument.getElementByTagName()<br>
+            这个集合对象是一个类似数组的列表， 没有数组的push和slice方法， 但提供数组中的length属性，访问集合元素时使用局部变量<br>
+            页面中的所有img元素: ducument.images<br>
+            页面中所有a元素: ducument.links<br>
+            页面中所有表单元素: ducument.forms<br>
+            页面中第一个表单的所有字段: ducument.forms[0].elements<br>
+            获取第一个元素: ducument.getElementById('div').firstChild<br>
+            获取相邻元素: ducument.getElementById('div').firstChild.nextSibling<br>
+            获取元素集合: ducument.getElementById('div').childNodes<br>
+            <h4>API只返回元素节点:</h4>
+                child 代替 childNodes<br>
+                childElementCount 代替 childNodes.length<br>
+                firstElementChild 代替 firstChild<br>
+                lastElementChild 代替 lastChild<br>
+                nextElementChild 代替 nextSibling<br>
+                previousElementSibling 代替 previousSibling<br>
+
+        
+            <h5>HTML DOM 方法</h5>
+            一些常用的 HTML DOM 方法：<br>
+
+            getElementById(id) - 获取带有指定 id 的节点（元素）<br>
+            appendChild(node) - 插入新的子节点（元素）<br>
+            removeChild(node) - 删除子节点（元素）<br>
+            一些常用的 HTML DOM 属性：
+            <br>
+            innerHTML - 节点（元素）的文本值<br>
+            parentNode - 节点（元素）的父节点<br>
+            childNodes - 节点（元素）的子节点<br>
+            attributes - 节点（元素）的属性节点<br>
+
+</div>
+<div class="searchDiv">
+    <ul>
+        <h3>导航栏</h3>
+        <li><a href="#kuangjia">kuangjia</a></li>
+        <li><a href="#allTags">allTags</a></li>
+        <li><a href="#allValue">allValue</a></li>
+        <li><a href="#tags">tags</a></li>
+        <li><a href="#allinput">allinput</a></li>
+        <li><a href="#htmlDom">htmlDom</a></li>
+    </ul>
+</div>
+
+</div>
+</body>
+</html>

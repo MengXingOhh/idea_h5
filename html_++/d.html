@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="html_++.css">
+</head>
+<body>
+    <div class="index_h">
+        <div class="classDiv" id="dragdrop">
+        <h3>api</h3>
+            html5定义中api是什么意思?  <br>
+            api就是接口，html里面的api也不例外，也是些编程接口，是你访问一些编码指令和一些标准的一个接口一个集合，就跟插座一样，是电和电器的一个接口。比如html5里面的canvas，是绘图的一个api，html5获取地理位置的api，即时通信的api，文件读取api等等，通过这些api来访问标准里面的指令编码，来操纵相应的操作。
+            不是说html5中的api是什么意思，它不独有，其他的api也是这意思也是这功能。
+     
+        <div>
+            <h3>拖放api</h3>
+            draggable属性：设置元素是否可拖动。<br>
+        <h4>  语法：</h4>
+            &ltelement draggable="true | false | auto" >  <br>
+                true: 可以拖动 <br>
+                false: 禁止拖动 <br>
+                auto: 跟随浏览器定义是否可以拖动 <br>
+        <h4>拖动事件：</h4>
+            - dragstart 在元素开始被拖动时触发 <br>
+            - dragend 在拖动操作完成时触发 <br>
+            - drag 在元素被拖动时触发 <br>
+        <h4>释放区事件：</h4>
+                dragenter 被拖动元素进入到释放区所占据的屏幕空间时触发 <br>
+                dragover 当被拖动元素在释放区内移动时触发 <br>
+                dragleave 当被拖动元素没有放下就离开释放区时触发 <br>
+                drop 当被拖动元素在释放区里放下时触发 <br>
+        </div> 
+
+        <hr>
+
+        <div >
+            <h3>新的操作方法</h3>
+            <ul>
+                <li>
+                  <h4>  1.获取元素的方法  </h4>
+                    获取单个元素,参数可以是我们任意的选择器。 <br>
+
+                    document.querySelect('选择器'); <br>
+                    获取多个元素，参数是任意的选择器 <br>
+
+                    document.querySelectAll('选择器'); <br>
+                </li>
+                <li>
+                  <h4>  2.类的操作</h4>
+                    添加类
+                    <br>
+                    oDiv.classList.add('类名');
+                    <br>
+                    移除类
+                    <br>
+                    oDiv.classList.remove('类名');
+                    <br>
+                    检测类
+                    <br>
+                    oDiv.classList.contains('类名');
+                    <br>
+                    切换类
+                    <br>
+                    oDiv.classList.toggle('类名');//有则删除，无则添加 
+                    <br>
+                </li>
+                <li>
+                   <h4> 3.自定义属性</h4>
+                    我们可以通过data-自定义属性名来给元素添加自定义的属性名。一旦添加完成之后。通过JS可以获取以及设置自定义属性。
+                    <br>
+                    比如定义一个data-test属性名
+                    <br>
+                    获取自定义的属性名
+                    <br>
+                    oDiv.dataset.test
+                    <br>
+                    设置自定义属性
+                    <br>
+                    oDiv.dataset.自定义属性名 = 值
+                    <br>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="classDiv" id="feilRead">
+            <h3>文件读取</h3>
+                读取文件，首先先得将文件上传，可以通过input的type为file的表单控件实现 <br>
+                &ltinput type='file' name=''> <br>
+                其次，通过FileReader读取文件。读取完文件之后，会将结果存储在result属性中，而不是直接返回 <br>
+             <h4>   FileReader常用方法</h4>
+                    1.readAsBinaryString: 将文件读取为二进制编码 <br>
+                    2.readAsDataURL: 将文件读取为DataURL <br>
+                    3.readAsText:将文件读取为文本 <br>
+             <h4>   FileReader提供的事件</h4>
+                        1.onabort <br>
+                        读取文件中断时触发 <br>
+                        2.onerror <br>
+                        读取文件出错时触发 <br>
+                        3.onload <br>
+                        读取文件完成时触发，只在读取成功后触发 <br>
+                        4.onloadend <br>
+                        读取文件完成时触发，无论读取成功或失败都会触发 <br>
+                        5.onloadstart <br>
+                        读取文件开始时触发 <br>
+                        6.onprogress <br>
+                        正在读取文件 <br>
+                <h3>获取网络状态</h3>
+                window.navigator.onlione返回浏览器的网络状态。联网状态返回true,断网状态时返回false
+
+        </div>
+        <hr>
+        <div class="classDiv" id="location">
+
+            <h3>地理位置定位</h3>
+            地理位置api允许用户向web应用程序提供他们的位置。处于隐私考虑，报告地理位置前会先请求用户许可 <br>
+          <h4> geolocation对象</h4> 
+            地理位置API通过navigator.geolocation提供 <br>
+            使用 getCurrentPosition() 方法来获得用户的位置。{navigator.geolocation.getCurrentPosition(showPosition)} 
+            <br>
+        </div>
+        <hr>
+
+        <div class="classDiv" id="localstroage">
+            <h3>本地存储</h3>
+            HTML5 web存储，一个比cookie更好的本地存储方式。 <br>
+            传统方式我们会以document.cookie来进行存储，但是由于其存储大小只有4k左右， 并且解析也相当的复杂，给开发带来诸多不便，
+            HTML5规范提出解决方案，使用sessionStorage和localStorage存储数据
+            <ul>
+                <li>
+                    <h4>localStorage</h4>
+                    特点： <br>
+                    永久存储 <br>
+                    多窗口共享 <br>
+                    容量大约为20M <br>
+                    常用方法 <br>
+                    window.localStorage.setItem(key,value); //设置存储的内容 <br>
+                    window.localStorage.getItem(key); //获取内容 <br>
+                    window.localStorage.removeItem(key);//删除内容 <br>
+                    window.localStorage.clear(); //清空内容 <br>
+                </li>
+                <li>
+                    <h4>sessionStorage</h4>
+                    生命周期为关闭当前浏览器窗口 <br>
+                    可以在同一个窗口下访问 <br>
+                    数据大小为5M左右 <br>
+                    常用方法 <br>
+                    window.sessionStorage.setItem(key,value); //设置存储的内容 <br>
+                    window.sessionStorage.getItem(key); //获取内容 <br>
+                    window.sessionStorage.removeItem(key);//删除内容 <br>
+                </li>
+            </ul>
+<hr>
+            <h3>应用程序缓存</h3>
+                HTML5 引入了应用程序缓存，这意味着 web 应用可进行缓存，并可在没有因特网连接时进行访问。
+                <br>
+                应用程序缓存为应用带来三个优势：
+                <br>
+                离线浏览 - 用户可在应用离线时使用它们 <br>
+                速度 - 已缓存资源加载得更快 <br>
+                减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源 <br>
+                如需启用应用程序缓存，请在文档的 &lthtml> 标签中包含 manifest 属性： <br>
+                每个指定了 manifest 的页面在用户对其访问时都会被缓存。如果未指定 manifest 属性，则页面不会被缓存（除非在 manifest 文件中直接指定了该页面）。
+                manifest 文件的建议的文件扩展名是：".appcache"。 <br>
+                请注意，manifest 文件需要配置正确的 MIME-type，即 "text/cache-manifest"。必须在 web 服务器上进行配置 <br>
+                <h3>Manifest 文件</h3>
+               
+                    manifest 文件是简单的文本文件，它告知浏览器被缓存的内容（以及不缓存的内容）。 <br>
+
+                    manifest 文件可分为三个部分： <br>
+
+                    CACHE MANIFEST - 在此标题下列出的文件将在首次下载后进行缓存 <br>
+                    NETWORK - 在此标题下列出的文件需要与服务器的连接，且不会被缓存 <br>
+                    FALLBACK - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面） <br>
+                   
+                    <h4>CACHE MANIFEST</h4> <br>
+                    第一行，CACHE MANIFEST，是必需的： <br>
+                    <code>   
+                     CACHE MANIFEST <br>
+                        /theme.css    (这里写 /需要缓存的文件名 ) 
+                    </code><br>
+                    <h4>NETWORK </h4> 
+                    下面的 NETWORK 小节规定文件 "login.asp" 永远不会被缓存，且离线时是不可用的： <br>
+                    <code>
+                    NETWORK:<br>
+                    login.ascode
+                    </code>
+                    可以使用星号来指示所有其他资源/文件都需要因特网连接： <br>
+                    <code>
+                    NETWORK:<br>
+                    *
+                    </code>
+                   <h4>FALLBACK</h4>  <br>
+                    下面的 FALLBACK 小节规定如果无法建立因特网连接，则用 "offline.html" 替代 /html5/ 目录中的所有文件： <br>
+                    <code>
+                    FALLBACK:<br>
+                    /html5/ /404.html
+                    </code>
+                    注释：第一个 URI 是资源，第二个是替补。
+              
+        </div>
+        <div class="classDiv" id="webworker">
+<hr>
+        <h3>webwoker</h3>
+
+        当在 HTML 页面中执行脚本时，页面是不可响应的，直到脚本已完成。
+        Web worker 是运行在后台的 JavaScript，独立于其他脚本，
+        不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 运行在后台。
+      
+            <h4>检测 Web Worker 支持</h4>
+
+        <code> 
+              if (typeof(Worker) !== "undefined"){else{}}
+        </code> 
+            <h4>创建 Web Worker 文件</h4>
+
+            在一个外部 JavaScript 文件中创建我们的 web worker
+          !!  postMessage() 方法 - 它用于向 HTML 页面传回一段消息 !!
+          <h4>创建 Web Worker 对象</h4>
+
+          有了 web worker 文件，我们需要从 HTML 页面调用它
+
+         <code>
+              if (typeof(w) == "undefined") {
+            w = new Worker("demo_workers.js");
+        }
+        </code>
+
+        <h4>终止 Web Worker</h4>
+        终止 web worker，并释放浏览器/计算机资源，请使用 terminate() 方法：
+        
+        <h4>复用 Web Worker</h4>
+        如果把 worker 变量设置为 undefined，在其被终止后，可以重复使用该代码
+
+    </div>
+    <div class="searchDiv">
+        <ul>
+            <h3>导航栏</h3>
+            <li><a href="#dragdrop">拖放api</a></li>
+            <li><a href="#feilRead">文件读取</a></li>
+            <li><a href="#location">地理定位</a></li>
+            <li><a href="#localstroage">本地缓存</a></li>
+            <li><a href="#webworker">webworker</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.理解
+   *全称 immediately-invaked function expression 意为立即调用的函数表达式，也就是说，声明函数的同时立即调用这个函数
+   2.作用 
+    *隐藏实现
+    *不会污染外部（全局）命名空间
+    IIFE的目的是为了隔离作用域，防止污染全局命名空间。
+-->
+<script>
+    (
+        function(){
+            var a = 3 ;
+            console.log(a*a);
+        }
+    )()
+</script>
+</body>
+</html>
